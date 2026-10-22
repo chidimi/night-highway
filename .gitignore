@@ -6,3 +6,8 @@ dist/
 /preview*.png
 /cabin-light-*.png
 /polish-review-*.png
+
+# Cloudflare local state and secrets
+.wrangler/
+.dev.vars*
+.env*

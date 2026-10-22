@@ -16,4 +16,16 @@ npm test
 npm run build
 ```
 
-設計の背景は [desgin.md](desgin.md)、開発方針は [AGENTS.md](AGENTS.md) を参照してください。公開・デプロイは含みません。
+設計の背景は [desgin.md](desgin.md)、開発方針は [AGENTS.md](AGENTS.md) を参照してください。Cloudflareへの公開手順は下記を参照してください。
+
+## Cloudflare
+
+Cloudflare Workers Static Assetsで `dist/` を公開します。Worker名は `night-highway`。既存の `night-flight` とは別のWorkerです。
+
+```sh
+npx wrangler login --scopes account:read user:read workers:write workers_scripts:write workers_routes:write
+npm run deploy:check
+npm run deploy
+```
+
+認証情報をソースに保存しないでください。現在は手動デプロイで、GitHubへのpushからの自動デプロイは設定していません。
