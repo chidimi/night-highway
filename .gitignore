@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local visual review captures
+/preview*.png
+/cabin-light-*.png
+/polish-review-*.png
