@@ -1,1 +1,246 @@
-:root{font-family:'Arial Narrow',Arial,sans-serif;color:#dcae27;background:#020605;font-synthesis:none}*{box-sizing:border-box}body{margin:0;overflow:hidden}button{font:inherit;cursor:pointer}button:focus-visible{outline:1px solid #dcae27;outline-offset:8px}[hidden]{display:none!important}#app,#scene{position:fixed;inset:0;width:100%;height:100%}#intro{position:absolute;inset:0;pointer-events:none}h1{position:absolute;top:9%;left:0;width:100%;margin:0;text-align:center;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(45px,9vw,138px);font-weight:900;line-height:1;letter-spacing:.095em;transform:rotate(-7deg) skew(-7deg) scaleX(.72);color:#e9b627;text-shadow:2px 1px #63430f;opacity:.93}.entry{position:absolute;bottom:17%;width:100%;text-align:center;pointer-events:auto}#start{border:0;background:none;color:#d9b449;padding:16px 32px;font-family:monospace;font-size:13px;letter-spacing:.4em;transition:color .2s}#start:hover{color:#fff0a6}.instructions{font-family:monospace;font-size:9px;letter-spacing:.15em;color:#7b7a66;margin-top:18px}#hud{position:absolute;bottom:5%;left:6%;right:6%;display:flex;align-items:center;justify-content:space-between}.speed{font-family:monospace;font-variant-numeric:tabular-nums;color:#a79050;opacity:.75}#speed{font-size:20px}.speed small{font-size:8px;margin-left:9px}#pause{background:none;color:#9e8b56;border:0;padding:12px 16px;font-size:14px;opacity:.65}#touch{position:absolute;bottom:18%;left:6%;right:6%;display:flex;gap:12px}#touch button{touch-action:none;user-select:none;border:1px solid #ab8d3d44;background:#080c09aa;color:#bda45d;min-width:60px;min-height:58px}#touch button:last-child{margin-left:auto;padding:0 24px}#error{position:absolute;top:40%;left:10%;right:10%;background:#191919;padding:24px;color:#eee}@media(pointer:fine){#touch{display:none!important}}@media(max-width:600px){h1{top:18%;font-size:13vw;transform:rotate(-7deg) skew(-7deg) scaleX(.85)}.instructions{font-size:8px;letter-spacing:.03em}.entry{bottom:25%}}
+:root {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: #dcae27;
+  background: #020605;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button:focus-visible {
+  outline: 1px solid #dcae27;
+  outline-offset: 8px;
+}
+[hidden] {
+  display: none !important;
+}
+#app,
+#scene {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+#intro {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+h1 {
+  position: absolute;
+  top: 9%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: Impact, 'Arial Narrow', sans-serif;
+  font-size: clamp(45px, 9vw, 138px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.095em;
+  transform: rotate(-7deg) skew(-7deg) scaleX(0.72);
+  color: #e9b627;
+  text-shadow: 2px 1px #63430f;
+  opacity: 0.93;
+}
+.entry {
+  position: absolute;
+  bottom: 17%;
+  width: 100%;
+  text-align: center;
+  pointer-events: auto;
+}
+#start {
+  border: 0;
+  background: none;
+  color: #d9b449;
+  padding: 16px 32px;
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.4em;
+  transition: color 0.2s;
+}
+#start:hover {
+  color: #fff0a6;
+}
+.instructions {
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: #7b7a66;
+  margin-top: 18px;
+}
+#hud {
+  position: absolute;
+  bottom: 5%;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.speed {
+  font-family: monospace;
+  font-variant-numeric: tabular-nums;
+  color: #a79050;
+  opacity: 0.75;
+}
+#speed {
+  font-size: 20px;
+}
+.speed small {
+  font-size: 8px;
+  margin-left: 9px;
+}
+#pause {
+  background: none;
+  color: #9e8b56;
+  border: 0;
+  padding: 12px 16px;
+  font-size: 14px;
+  opacity: 0.65;
+}
+#touch {
+  position: absolute;
+  bottom: 18%;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  gap: 12px;
+}
+#touch button {
+  touch-action: none;
+  user-select: none;
+  border: 1px solid #ab8d3d44;
+  background: #080c09aa;
+  color: #bda45d;
+  min-width: 60px;
+  min-height: 58px;
+}
+#touch button:last-child {
+  margin-left: auto;
+  padding: 0 24px;
+}
+#error {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  right: 10%;
+  background: #191919;
+  padding: 24px;
+  color: #eee;
+}
+@media (pointer: fine) {
+  #touch {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    top: 18%;
+    font-size: 13vw;
+    transform: rotate(-7deg) skew(-7deg) scaleX(0.85);
+  }
+  .instructions {
+    font-size: 8px;
+    letter-spacing: 0.03em;
+  }
+  .entry {
+    bottom: 25%;
+  }
+}
+
+.music {
+  margin: 0 auto 18px;
+  padding: 0 18px;
+  font-family: 'Arial Narrow', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+.music-label {
+  margin: 0 0 10px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: #96917b;
+}
+.music a {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.music a:focus-visible {
+  outline: 1px solid #dcae27;
+  outline-offset: 5px;
+}
+.music-track {
+  display: block;
+  padding: 6px 8px;
+  color: #c6b579;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+.music-artist {
+  color: #a49b7d;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+.music-track > span:last-child {
+  margin-left: 8px;
+  font-size: 11px;
+}
+.music-browse {
+  display: block;
+  padding: 10px 8px 6px;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  color: #999381;
+}
+.music a:hover {
+  color: #efcf7c;
+}
+.music-note {
+  margin: 8px 0 0;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  color: #999381;
+}
+@media (max-width: 600px) {
+  .entry {
+    bottom: 15%;
+  }
+  .music {
+    margin-bottom: 14px;
+  }
+}
+@media (max-height: 520px) {
+  h1 {
+    top: 5%;
+    font-size: clamp(30px, 8vw, 66px);
+  }
+  .entry {
+    bottom: 5%;
+  }
+  .music {
+    margin-bottom: 4px;
+  }
+  .music-label {
+    margin-bottom: 4px;
+  }
+  .music-note {
+    display: none;
+  }
+  .instructions {
+    margin-top: 5px;
+  }
+  #start {
+    padding: 10px 28px;
+  }
+}

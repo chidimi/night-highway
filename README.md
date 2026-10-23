@@ -10,6 +10,7 @@ npm run dev
 表示されたローカルURLをブラウザーで開き、「走りはじめる」を押します。↑ / Wを長押しして加速、← → / A Dで左右操作。アクセルを離すと減速します。タッチ操作にも対応。音楽はお好みのプレイヤーで流してください。
 
 ```sh
+npm run format:check
 npm run lint
 npm run typecheck
 npm test
@@ -29,3 +30,5 @@ npm run deploy
 ```
 
 認証情報をソースに保存しないでください。現在は手動デプロイで、GitHubへのpushからの自動デプロイは設定していません。
+
+コードの整形は `npm run format`、整形済みかの確認は `npm run format:check` を使います。

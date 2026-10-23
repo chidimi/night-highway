@@ -1,7 +1,54 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#06080c"><meta name="description" content="一本道と、繰り返す灯り。夜の高速道路を走る小さな試作。"><title>Night Highway — 光の下を走る</title></head>
-<body><main id="app"><canvas id="scene" aria-label="等間隔の道路灯に照らされた夜の一本道"></canvas>
-<section id="intro"><h1>NIGHT HIGHWAY</h1><div class="entry"><button id="start">DRIVE</button><p class="instructions">↑ / W ACCELERATE &nbsp; · &nbsp; ← → / A D STEER</p></div></section>
-<div id="hud" hidden><div class="speed"><span id="speed">0</span><small>km/h</small></div><button id="pause" aria-label="走行を一時停止">Ⅱ</button></div>
-<div id="touch" hidden><button data-control="left" aria-label="左にハンドル">←</button><button data-control="right" aria-label="右にハンドル">→</button><button data-control="gas" aria-label="アクセル">ACCEL</button></div>
-<p id="error" role="alert" hidden></p></main><script type="module" src="/src/main.ts"></script></body></html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#06080c" />
+    <meta name="description" content="一本道と、繰り返す灯り。夜の高速道路を走る小さな試作。" />
+    <title>Night Highway — 光の下を走る</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="等間隔の道路灯に照らされた夜の一本道"></canvas>
+      <section id="intro">
+        <h1>NIGHT HIGHWAY</h1>
+        <div class="entry">
+          <div class="music" aria-label="出発前の音楽">
+            <p class="music-label">今夜の一曲</p>
+            <a
+              class="music-track"
+              href="https://open.spotify.com/track/2Eot25c6UOeLc4jcN3fEQF"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="FishmansのBABY BLUEをSpotifyで開く（別タブ）"
+              >BABY BLUE <span class="music-artist">/ Fishmans</span>
+              <span aria-hidden="true">↗</span></a
+            >
+            <a
+              class="music-browse"
+              href="https://open.spotify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotifyでほかの曲を選ぶ（別タブ）"
+              >Spotifyでほかの曲を選ぶ <span aria-hidden="true">↗</span></a
+            >
+            <p class="music-note">音楽をかけたら、この道へ。</p>
+          </div>
+          <button id="start">DRIVE</button>
+          <p class="instructions">↑ / W ACCELERATE &nbsp; · &nbsp; ← → / A D STEER</p>
+        </div>
+      </section>
+      <div id="hud" hidden>
+        <div class="speed"><span id="speed">0</span><small>km/h</small></div>
+        <button id="pause" aria-label="走行を一時停止">Ⅱ</button>
+      </div>
+      <div id="touch" hidden>
+        <button data-control="left" aria-label="左にハンドル">←</button
+        ><button data-control="right" aria-label="右にハンドル">→</button
+        ><button data-control="gas" aria-label="アクセル">ACCEL</button>
+      </div>
+      <p id="error" role="alert" hidden></p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
